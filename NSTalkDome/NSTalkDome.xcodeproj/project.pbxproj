@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C212804221D0C58C00212EDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C212804121D0C58C00212EDB /* AppDelegate.m */; };
-		C212804421D0C58E00212EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C212804321D0C58E00212EDB /* Assets.xcassets */; };
-		C212804721D0C58E00212EDB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C212804521D0C58E00212EDB /* MainMenu.xib */; };
-		C212804A21D0C58E00212EDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C212804921D0C58E00212EDB /* main.m */; };
+		C26106DC21D4D4340097664F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26106DB21D4D4340097664F /* AppDelegate.m */; };
+		C26106DE21D4D4360097664F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26106DD21D4D4360097664F /* Assets.xcassets */; };
+		C26106E121D4D4360097664F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26106DF21D4D4360097664F /* MainMenu.xib */; };
+		C26106E421D4D4360097664F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26106E321D4D4360097664F /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C212803D21D0C58C00212EDB /* HelloMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C212804021D0C58C00212EDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C212804121D0C58C00212EDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C212804321D0C58E00212EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C212804621D0C58E00212EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C212804821D0C58E00212EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C212804921D0C58E00212EDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C212804B21D0C58E00212EDB /* HelloMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloMac.entitlements; sourceTree = "<group>"; };
+		C26106D721D4D4340097664F /* NSTalkDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTalkDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26106DA21D4D4340097664F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C26106DB21D4D4340097664F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C26106DD21D4D4360097664F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C26106E021D4D4360097664F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C26106E221D4D4360097664F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26106E321D4D4360097664F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C26106E521D4D4360097664F /* NSTalkDome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSTalkDome.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C212803A21D0C58C00212EDB /* Frameworks */ = {
+		C26106D421D4D4340097664F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C212803421D0C58C00212EDB = {
+		C26106CE21D4D4340097664F = {
 			isa = PBXGroup;
 			children = (
-				C212803F21D0C58C00212EDB /* HelloMac */,
-				C212803E21D0C58C00212EDB /* Products */,
+				C26106D921D4D4340097664F /* NSTalkDome */,
+				C26106D821D4D4340097664F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C212803E21D0C58C00212EDB /* Products */ = {
+		C26106D821D4D4340097664F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C212803D21D0C58C00212EDB /* HelloMac.app */,
+				C26106D721D4D4340097664F /* NSTalkDome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C212803F21D0C58C00212EDB /* HelloMac */ = {
+		C26106D921D4D4340097664F /* NSTalkDome */ = {
 			isa = PBXGroup;
 			children = (
-				C212804021D0C58C00212EDB /* AppDelegate.h */,
-				C212804121D0C58C00212EDB /* AppDelegate.m */,
-				C212804321D0C58E00212EDB /* Assets.xcassets */,
-				C212804521D0C58E00212EDB /* MainMenu.xib */,
-				C212804821D0C58E00212EDB /* Info.plist */,
-				C212804921D0C58E00212EDB /* main.m */,
-				C212804B21D0C58E00212EDB /* HelloMac.entitlements */,
+				C26106DA21D4D4340097664F /* AppDelegate.h */,
+				C26106DB21D4D4340097664F /* AppDelegate.m */,
+				C26106DD21D4D4360097664F /* Assets.xcassets */,
+				C26106DF21D4D4360097664F /* MainMenu.xib */,
+				C26106E221D4D4360097664F /* Info.plist */,
+				C26106E321D4D4360097664F /* main.m */,
+				C26106E521D4D4360097664F /* NSTalkDome.entitlements */,
 			);
-			path = HelloMac;
+			path = NSTalkDome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C212803C21D0C58C00212EDB /* HelloMac */ = {
+		C26106D621D4D4340097664F /* NSTalkDome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C212804E21D0C58E00212EDB /* Build configuration list for PBXNativeTarget "HelloMac" */;
+			buildConfigurationList = C26106E821D4D4360097664F /* Build configuration list for PBXNativeTarget "NSTalkDome" */;
 			buildPhases = (
-				C212803921D0C58C00212EDB /* Sources */,
-				C212803A21D0C58C00212EDB /* Frameworks */,
-				C212803B21D0C58C00212EDB /* Resources */,
+				C26106D321D4D4340097664F /* Sources */,
+				C26106D421D4D4340097664F /* Frameworks */,
+				C26106D521D4D4340097664F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HelloMac;
-			productName = HelloMac;
-			productReference = C212803D21D0C58C00212EDB /* HelloMac.app */;
+			name = NSTalkDome;
+			productName = NSTalkDome;
+			productReference = C26106D721D4D4340097664F /* NSTalkDome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C212803521D0C58C00212EDB /* Project object */ = {
+		C26106CF21D4D4340097664F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = cximac;
 				TargetAttributes = {
-					C212803C21D0C58C00212EDB = {
+					C26106D621D4D4340097664F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = C212803821D0C58C00212EDB /* Build configuration list for PBXProject "HelloMac" */;
+			buildConfigurationList = C26106D221D4D4340097664F /* Build configuration list for PBXProject "NSTalkDome" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,45 +107,45 @@
 				en,
 				Base,
 			);
-			mainGroup = C212803421D0C58C00212EDB;
-			productRefGroup = C212803E21D0C58C00212EDB /* Products */;
+			mainGroup = C26106CE21D4D4340097664F;
+			productRefGroup = C26106D821D4D4340097664F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C212803C21D0C58C00212EDB /* HelloMac */,
+				C26106D621D4D4340097664F /* NSTalkDome */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C212803B21D0C58C00212EDB /* Resources */ = {
+		C26106D521D4D4340097664F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C212804421D0C58E00212EDB /* Assets.xcassets in Resources */,
-				C212804721D0C58E00212EDB /* MainMenu.xib in Resources */,
+				C26106DE21D4D4360097664F /* Assets.xcassets in Resources */,
+				C26106E121D4D4360097664F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C212803921D0C58C00212EDB /* Sources */ = {
+		C26106D321D4D4340097664F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C212804A21D0C58E00212EDB /* main.m in Sources */,
-				C212804221D0C58C00212EDB /* AppDelegate.m in Sources */,
+				C26106E421D4D4360097664F /* main.m in Sources */,
+				C26106DC21D4D4340097664F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C212804521D0C58E00212EDB /* MainMenu.xib */ = {
+		C26106DF21D4D4360097664F /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C212804621D0C58E00212EDB /* Base */,
+				C26106E021D4D4360097664F /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C212804C21D0C58E00212EDB /* Debug */ = {
+		C26106E621D4D4360097664F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		C212804D21D0C58E00212EDB /* Release */ = {
+		C26106E721D4D4360097664F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,44 +264,36 @@
 			};
 			name = Release;
 		};
-		C212804F21D0C58E00212EDB /* Debug */ = {
+		C26106E921D4D4360097664F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloMac/HelloMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NSTalkDome/NSTalkDome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMac",
-				);
-				INFOPLIST_FILE = HelloMac/Info.plist;
+				INFOPLIST_FILE = NSTalkDome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.HelloMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.NSTalkDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C212805021D0C58E00212EDB /* Release */ = {
+		C26106EA21D4D4360097664F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloMac/HelloMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NSTalkDome/NSTalkDome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMac",
-				);
-				INFOPLIST_FILE = HelloMac/Info.plist;
+				INFOPLIST_FILE = NSTalkDome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.HelloMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.NSTalkDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -309,25 +301,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C212803821D0C58C00212EDB /* Build configuration list for PBXProject "HelloMac" */ = {
+		C26106D221D4D4340097664F /* Build configuration list for PBXProject "NSTalkDome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C212804C21D0C58E00212EDB /* Debug */,
-				C212804D21D0C58E00212EDB /* Release */,
+				C26106E621D4D4360097664F /* Debug */,
+				C26106E721D4D4360097664F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C212804E21D0C58E00212EDB /* Build configuration list for PBXNativeTarget "HelloMac" */ = {
+		C26106E821D4D4360097664F /* Build configuration list for PBXNativeTarget "NSTalkDome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C212804F21D0C58E00212EDB /* Debug */,
-				C212805021D0C58E00212EDB /* Release */,
+				C26106E921D4D4360097664F /* Debug */,
+				C26106EA21D4D4360097664F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C212803521D0C58C00212EDB /* Project object */;
+	rootObject = C26106CF21D4D4340097664F /* Project object */;
 }

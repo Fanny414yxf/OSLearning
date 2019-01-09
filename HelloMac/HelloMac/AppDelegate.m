@@ -10,11 +10,21 @@
 
 @interface AppDelegate ()<NSComboBoxDataSource, NSComboBoxDelegate>
 {
+    
+    NSString * _newBundleId;
+    NSString *appPath;
+    NSString * workingPath;
+    NSString * entitlementsDirPath;
+    
     NSTask *certTask;
     NSTask *unzipTask;
+    NSTask *provisioningTask;
     NSMutableArray *certComboBoxItems;
 }
 
+/**
+ command + option + /
+ */
 @property (weak) IBOutlet NSWindow *window;
 
 @property (weak) IBOutlet NSTextField *ipaNameTextField;
@@ -42,21 +52,29 @@
     
     //从钥匙串获取证书
     [self getSigingCertificates];
+    
+    
+    
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 
+
+
 //重签
 - (IBAction)resignBtn:(id)sender {
     
-    NSString * workingPath = NSTemporaryDirectory() ;
+    workingPath = NSTemporaryDirectory() ;
 
-    NSString * entitlementsDirPath = [workingPath stringByAppendingString:@"-entitlements"];
+    entitlementsDirPath = [workingPath stringByAppendingString:@"-entitlements"];
 
+    NSString *sourcePath = [_ipaNameTextField stringValue];
     if ([_certComtoBox objectValues]) {
-        if ([[[[_ipaNameTextField stringValue] pathExtension] lowercaseString] isEqualToString:@"ipa"] || [[[[_ipaNameTextField stringValue] pathExtension] lowercaseString] isEqualToString:@"xcarchive"]) {
+        if ([[[sourcePath pathExtension] lowercaseString] isEqualToString:@"ipa"] || [[[sourcePath  pathExtension] lowercaseString] isEqualToString:@"xcarchive"]) {
 
             
             [[NSFileManager defaultManager] removeItemAtPath:workingPath error:nil];
@@ -64,26 +82,142 @@
             [[NSFileManager defaultManager] removeItemAtPath:entitlementsDirPath error:nil];
             [[NSFileManager defaultManager] createDirectoryAtPath:entitlementsDirPath withIntermediateDirectories:TRUE attributes:nil error:nil];
             
-            unzipTask = [[NSTask alloc] init];
-            [unzipTask setLaunchPath:@"/usr/bin/unzip"];
-            [unzipTask setArguments:[NSArray arrayWithObjects:@"-q", [_ipaNameTextField stringValue], @"-d", workingPath, nil]];
+            if ([[[sourcePath pathExtension]  lowercaseString] isEqualToString:@"ipa"]) {
+                //解压
+                unzipTask = [[NSTask alloc] init];
+                [unzipTask setLaunchPath:@"/usr/bin/unzip"];
+                [unzipTask setArguments:[NSArray arrayWithObjects:@"-q", [_ipaNameTextField stringValue], @"-d", workingPath, nil]];
+                
+                [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkUnzip:) userInfo:nil repeats:TRUE];
+                
+                [unzipTask launch];
+            }else{
+                
+            }
             
-            [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkUnzip:) userInfo:nil repeats:TRUE];
             
-            [unzipTask launch];
         }
     }
     
 }
 
 
-
-
 - (void)checkUnzip:(NSTimer *)timer
+{
+    if ([unzipTask isRunning] == 0) {
+        [timer invalidate];
+        unzipTask = nil;
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[workingPath stringByAppendingPathComponent:@"Payload"]]) {
+            [self checkDylibFile];
+            
+            [self checkAllCheckBoxes];
+        }else{
+            NSLog(@"解压失败");
+        }
+    }
+}
+
+
+
+- (void)checkAllCheckBoxes
+{
+    if ([[_mobileprovisionBtn stringValue] isEqualToString:@""]) {
+    
+    }else{
+        [self doProvisioning];
+    }
+    
+}
+
+
+- (void)doProvisioning
+{
+    NSArray *dirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[workingPath stringByAppendingPathComponent:@"Payload"] error:nil];
+    for (NSString *file in dirContents) {
+        if ([[[file pathExtension] lowercaseString] isEqualToString:@"app"]) {
+            appPath = [[workingPath stringByAppendingPathComponent:@"Payload"] stringByAppendingPathComponent:file];
+            if ([[NSFileManager defaultManager] fileExistsAtPath: [appPath stringByAppendingPathComponent:@"embedded.mobileprovision"]]) {
+                [[NSFileManager defaultManager] removeItemAtPath:[appPath stringByAppendingPathComponent:@"embedded.mobileprovision"] error:nil];
+            }
+            break;
+        }
+    }
+    
+    NSString * targetPath = [appPath stringByAppendingPathComponent:@"embedded.mobileprovision"];
+    provisioningTask = [[NSTask alloc] init];
+    [provisioningTask setLaunchPath:@"/bin/cp"];
+    [provisioningTask setArguments:[NSArray arrayWithObjects:[_mobileprovisionTextField stringValue], targetPath, nil]];
+    [provisioningTask launch];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkProvisioning:) userInfo:nil repeats:TRUE];
+    
+}
+
+- (void)checkProvisioning:(NSTimer *)timer
+{
+    if ([provisioningTask isRunning]) {
+        [timer invalidate];
+        provisioningTask = nil;
+        
+        NSArray *dircontents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[workingPath stringByAppendingPathComponent:@"Payload"] error:nil];
+        
+        
+    }
+}
+
+
+#pragma mark ---- dylib
+- (void)checkDylibFile
+{
+    if (_dylibTextField.stringValue.length == 0) {
+        return;
+    }else{
+        //stringByAppendingPathComponent： 添加/,  workingPath/Payload
+         NSArray *dirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[workingPath stringByAppendingPathComponent:@"Payload"] error:nil];
+        NSString *infoPlistPath = nil;
+        NSString *appFolderPath = nil;
+        for (NSString *file in dirContents) {
+            if ([[[file pathExtension] lowercaseString] isEqualToString:@"app"]) {
+                appFolderPath = [[workingPath stringByAppendingPathComponent:@"Payload"] stringByAppendingPathComponent:file];
+                infoPlistPath = [appFolderPath stringByAppendingPathComponent:@"info.plist"];
+                break;
+            }
+        }
+        
+        NSString * frameworkfolderPath = [appFolderPath stringByAppendingPathComponent:@"Frameworks"];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:frameworkfolderPath]) {
+            [[NSFileManager defaultManager]  createDirectoryAtPath:frameworkfolderPath withIntermediateDirectories:NO attributes:nil error:nil];
+        }
+        if ([[NSFileManager defaultManager] fileExistsAtPath:_dylibTextField.stringValue]) {
+            NSString *dest = [frameworkfolderPath stringByAppendingPathComponent:_dylibTextField.stringValue.lastPathComponent];
+            NSError *erro = nil;
+            [[NSFileManager defaultManager] copyItemAtPath:_dylibTextField.stringValue toPath:dest error:&erro];
+            
+            NSDictionary * infoPlistDic = [NSDictionary dictionaryWithContentsOfFile:infoPlistPath];
+            NSString *binaryName = infoPlistDic[@"CFBundleExecutable"];
+            NSString *binaryPath = [appFolderPath stringByAppendingPathComponent:binaryName];
+            NSString *dylibRelativePath = [@"Frameworks" stringByAppendingPathComponent:_dylibTextField.stringValue.lastPathComponent];
+            
+            [self injectDylibToBinaryBinaryPath:binaryPath dylibPath:dylibRelativePath];
+        }
+    }
+}
+
+
+void code(NSString *b, NSString *B)
+{
+    
+}
+- (void)injectDylibToBinaryBinaryPath:(NSString *)binry dylibPath:(NSString *)dylibPath
 {
     
 }
 
+
+
+
+#pragma mark -----  获取证书
 - (void)getSigingCertificates
 {
     

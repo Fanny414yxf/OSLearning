@@ -7,25 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C212804221D0C58C00212EDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C212804121D0C58C00212EDB /* AppDelegate.m */; };
-		C212804421D0C58E00212EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C212804321D0C58E00212EDB /* Assets.xcassets */; };
-		C212804721D0C58E00212EDB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C212804521D0C58E00212EDB /* MainMenu.xib */; };
-		C212804A21D0C58E00212EDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C212804921D0C58E00212EDB /* main.m */; };
+		C26106F921D4F73B0097664F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26106F821D4F73B0097664F /* main.m */; };
+		C261070221D4F7EB0097664F /* FannyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C261070021D4F7EB0097664F /* FannyDelegate.m */; };
+		C261070521D4F8CB0097664F /* fanny.m in Sources */ = {isa = PBXBuildFile; fileRef = C261070421D4F8CB0097664F /* fanny.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C26106F321D4F73B0097664F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		C212803D21D0C58C00212EDB /* HelloMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C212804021D0C58C00212EDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C212804121D0C58C00212EDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C212804321D0C58E00212EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C212804621D0C58E00212EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C212804821D0C58E00212EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C212804921D0C58E00212EDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C212804B21D0C58E00212EDB /* HelloMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloMac.entitlements; sourceTree = "<group>"; };
+		C26106F521D4F73B0097664F /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26106F821D4F73B0097664F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C26106FF21D4F7EB0097664F /* FannyDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FannyDelegate.h; sourceTree = "<group>"; };
+		C261070021D4F7EB0097664F /* FannyDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FannyDelegate.m; sourceTree = "<group>"; };
+		C261070121D4F7EB0097664F /* FannyDelegate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FannyDelegate.xib; sourceTree = "<group>"; };
+		C261070321D4F8CB0097664F /* fanny.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fanny.h; sourceTree = "<group>"; };
+		C261070421D4F8CB0097664F /* fanny.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fanny.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C212803A21D0C58C00212EDB /* Frameworks */ = {
+		C26106F221D4F73B0097664F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,125 +45,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C212803421D0C58C00212EDB = {
+		C26106EC21D4F73B0097664F = {
 			isa = PBXGroup;
 			children = (
-				C212803F21D0C58C00212EDB /* HelloMac */,
-				C212803E21D0C58C00212EDB /* Products */,
+				C26106F721D4F73B0097664F /* test */,
+				C26106F621D4F73B0097664F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C212803E21D0C58C00212EDB /* Products */ = {
+		C26106F621D4F73B0097664F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C212803D21D0C58C00212EDB /* HelloMac.app */,
+				C26106F521D4F73B0097664F /* test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C212803F21D0C58C00212EDB /* HelloMac */ = {
+		C26106F721D4F73B0097664F /* test */ = {
 			isa = PBXGroup;
 			children = (
-				C212804021D0C58C00212EDB /* AppDelegate.h */,
-				C212804121D0C58C00212EDB /* AppDelegate.m */,
-				C212804321D0C58E00212EDB /* Assets.xcassets */,
-				C212804521D0C58E00212EDB /* MainMenu.xib */,
-				C212804821D0C58E00212EDB /* Info.plist */,
-				C212804921D0C58E00212EDB /* main.m */,
-				C212804B21D0C58E00212EDB /* HelloMac.entitlements */,
+				C26106F821D4F73B0097664F /* main.m */,
+				C26106FF21D4F7EB0097664F /* FannyDelegate.h */,
+				C261070021D4F7EB0097664F /* FannyDelegate.m */,
+				C261070121D4F7EB0097664F /* FannyDelegate.xib */,
+				C261070321D4F8CB0097664F /* fanny.h */,
+				C261070421D4F8CB0097664F /* fanny.m */,
 			);
-			path = HelloMac;
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C212803C21D0C58C00212EDB /* HelloMac */ = {
+		C26106F421D4F73B0097664F /* test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C212804E21D0C58E00212EDB /* Build configuration list for PBXNativeTarget "HelloMac" */;
+			buildConfigurationList = C26106FC21D4F73B0097664F /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
-				C212803921D0C58C00212EDB /* Sources */,
-				C212803A21D0C58C00212EDB /* Frameworks */,
-				C212803B21D0C58C00212EDB /* Resources */,
+				C26106F121D4F73B0097664F /* Sources */,
+				C26106F221D4F73B0097664F /* Frameworks */,
+				C26106F321D4F73B0097664F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HelloMac;
-			productName = HelloMac;
-			productReference = C212803D21D0C58C00212EDB /* HelloMac.app */;
-			productType = "com.apple.product-type.application";
+			name = test;
+			productName = test;
+			productReference = C26106F521D4F73B0097664F /* test */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C212803521D0C58C00212EDB /* Project object */ = {
+		C26106ED21D4F73B0097664F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = cximac;
 				TargetAttributes = {
-					C212803C21D0C58C00212EDB = {
+					C26106F421D4F73B0097664F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = C212803821D0C58C00212EDB /* Build configuration list for PBXProject "HelloMac" */;
+			buildConfigurationList = C26106F021D4F73B0097664F /* Build configuration list for PBXProject "test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = C212803421D0C58C00212EDB;
-			productRefGroup = C212803E21D0C58C00212EDB /* Products */;
+			mainGroup = C26106EC21D4F73B0097664F;
+			productRefGroup = C26106F621D4F73B0097664F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C212803C21D0C58C00212EDB /* HelloMac */,
+				C26106F421D4F73B0097664F /* test */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		C212803B21D0C58C00212EDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C212804421D0C58E00212EDB /* Assets.xcassets in Resources */,
-				C212804721D0C58E00212EDB /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		C212803921D0C58C00212EDB /* Sources */ = {
+		C26106F121D4F73B0097664F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C212804A21D0C58E00212EDB /* main.m in Sources */,
-				C212804221D0C58C00212EDB /* AppDelegate.m in Sources */,
+				C261070521D4F8CB0097664F /* fanny.m in Sources */,
+				C26106F921D4F73B0097664F /* main.m in Sources */,
+				C261070221D4F7EB0097664F /* FannyDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		C212804521D0C58E00212EDB /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C212804621D0C58E00212EDB /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		C212804C21D0C58E00212EDB /* Debug */ = {
+		C26106FA21D4F73B0097664F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +198,7 @@
 			};
 			name = Debug;
 		};
-		C212804D21D0C58E00212EDB /* Release */ = {
+		C26106FB21D4F73B0097664F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,44 +250,18 @@
 			};
 			name = Release;
 		};
-		C212804F21D0C58E00212EDB /* Debug */ = {
+		C26106FD21D4F73B0097664F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloMac/HelloMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMac",
-				);
-				INFOPLIST_FILE = HelloMac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.HelloMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C212805021D0C58E00212EDB /* Release */ = {
+		C26106FE21D4F73B0097664F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloMac/HelloMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMac",
-				);
-				INFOPLIST_FILE = HelloMac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.HelloMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -309,25 +269,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C212803821D0C58C00212EDB /* Build configuration list for PBXProject "HelloMac" */ = {
+		C26106F021D4F73B0097664F /* Build configuration list for PBXProject "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C212804C21D0C58E00212EDB /* Debug */,
-				C212804D21D0C58E00212EDB /* Release */,
+				C26106FA21D4F73B0097664F /* Debug */,
+				C26106FB21D4F73B0097664F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C212804E21D0C58E00212EDB /* Build configuration list for PBXNativeTarget "HelloMac" */ = {
+		C26106FC21D4F73B0097664F /* Build configuration list for PBXNativeTarget "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C212804F21D0C58E00212EDB /* Debug */,
-				C212805021D0C58E00212EDB /* Release */,
+				C26106FD21D4F73B0097664F /* Debug */,
+				C26106FE21D4F73B0097664F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C212803521D0C58C00212EDB /* Project object */;
+	rootObject = C26106ED21D4F73B0097664F /* Project object */;
 }
