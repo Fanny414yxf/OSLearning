@@ -95,7 +95,6 @@
                 
             }
             
-            
         }
     }
     
@@ -275,7 +274,6 @@ void code(NSString *b, NSString *B)
             }
         }
         certComboBoxItems = [NSMutableArray arrayWithArray:tempGetCertsResult];
-        
         
         
         dispatch_async(dispatch_get_main_queue(), ^{

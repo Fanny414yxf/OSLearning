@@ -11,5 +11,10 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 
+- (void)doingSomeOptions1;
+- (void)doingSomeOptions5;
+- (void)doingSomeOptions10;
+- (void)doingSomeOptionsfanny;
+
 @end
 

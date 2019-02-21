@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C215561F21F5AC35006FF357 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C215561E21F5AC35006FF357 /* TestVC.m */; };
 		C26106DC21D4D4340097664F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26106DB21D4D4340097664F /* AppDelegate.m */; };
 		C26106DE21D4D4360097664F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26106DD21D4D4360097664F /* Assets.xcassets */; };
 		C26106E121D4D4360097664F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26106DF21D4D4360097664F /* MainMenu.xib */; };
 		C26106E421D4D4360097664F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26106E321D4D4360097664F /* main.m */; };
+		C26A435021F1C84B008E4F92 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = C26A434F21F1C84B008E4F92 /* func.list */; };
+		C26A435221F1C862008E4F92 /* code.sh in Resources */ = {isa = PBXBuildFile; fileRef = C26A435121F1C862008E4F92 /* code.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C215561D21F5AC35006FF357 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		C215561E21F5AC35006FF357 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		C26106D721D4D4340097664F /* NSTalkDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTalkDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26106DA21D4D4340097664F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C26106DB21D4D4340097664F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -22,6 +27,10 @@
 		C26106E221D4D4360097664F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26106E321D4D4360097664F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C26106E521D4D4360097664F /* NSTalkDome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSTalkDome.entitlements; sourceTree = "<group>"; };
+		C26A434F21F1C84B008E4F92 /* func.list */ = {isa = PBXFileReference; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
+		C26A435121F1C862008E4F92 /* code.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = code.sh; sourceTree = "<group>"; };
+		C26A435421F1C8F1008E4F92 /* CodeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeDefine.h; sourceTree = "<group>"; };
+		C26A435521F1CB0A008E4F92 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,12 @@
 			children = (
 				C26106DA21D4D4340097664F /* AppDelegate.h */,
 				C26106DB21D4D4340097664F /* AppDelegate.m */,
+				C215561D21F5AC35006FF357 /* TestVC.h */,
+				C215561E21F5AC35006FF357 /* TestVC.m */,
+				C26A435421F1C8F1008E4F92 /* CodeDefine.h */,
+				C26A435521F1CB0A008E4F92 /* PrefixHeader.pch */,
+				C26A434F21F1C84B008E4F92 /* func.list */,
+				C26A435121F1C862008E4F92 /* code.sh */,
 				C26106DD21D4D4360097664F /* Assets.xcassets */,
 				C26106DF21D4D4360097664F /* MainMenu.xib */,
 				C26106E221D4D4360097664F /* Info.plist */,
@@ -124,6 +139,8 @@
 			files = (
 				C26106DE21D4D4360097664F /* Assets.xcassets in Resources */,
 				C26106E121D4D4360097664F /* MainMenu.xib in Resources */,
+				C26A435021F1C84B008E4F92 /* func.list in Resources */,
+				C26A435221F1C862008E4F92 /* code.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C215561F21F5AC35006FF357 /* TestVC.m in Sources */,
 				C26106E421D4D4360097664F /* main.m in Sources */,
 				C26106DC21D4D4340097664F /* AppDelegate.m in Sources */,
 			);
@@ -269,8 +287,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NSTalkDome/NSTalkDome.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NSTalkDome/PrefixHeader.pch";
 				INFOPLIST_FILE = NSTalkDome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -278,6 +298,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.NSTalkDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -286,8 +308,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NSTalkDome/NSTalkDome.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NSTalkDome/PrefixHeader.pch";
 				INFOPLIST_FILE = NSTalkDome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +319,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.NSTalkDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};

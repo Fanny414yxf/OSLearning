@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSBridge Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
+
+    <style type="text/css">
+        .btn {
+            background-color: #aaa;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #444444;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        #response {
+            background: #eeeeee;
+            word-wrap: break-word;
+            display: block;
+            outline: 1px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<p style="color: red">嵌入页区域</p>
+<p>以webkit的方式实现</p>
+<button class="btn" id="login">执行登录操作</button>
+<button class="btn" id="logout">执行登出操作</button>
+
+<pre id="response"></pre>
+
+<script type="text/javascript">
+    /**
+     * 显示响应信息
+     * @param response 响应信心
+     */
+    function showResponse(response) {
+        $('#response').text(response);
+    }
+
+    /**
+     * jQuery
+     */
+    $(function () {
+        $("#login").click(function () {
+            window.webkit.messageHandlers.login.postMessage({
+                'account': '13000000000',
+                'password': '123456'
+            });
+        });
+
+        $('#logout').click(function () {
+            window.webkit.messageHandlers.logout.postMessage(null);
+        });
+    });
+</script>
+</body>
+</html>

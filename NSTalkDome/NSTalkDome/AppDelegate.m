@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestVC.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSString *APPPath = [NSString stringWithFormat:@"/Applications/TextEdit.app/Contents/MacOS/TextEdit"];
-    
-    //‎⁨Macintosh HD⁩ ▸ ⁨应用程序⁩ ▸ ⁨网易有道词典.app⁩ ▸ ⁨Contents⁩ ▸ ⁨MacOS⁩
-//    _task = [[NSTask alloc] init];
-//    [_task setLaunchPath:@"/Applications/TextEdit.app/Contents/MacOS/TextEdit"];
-//    [_task launch];
-    
     
     
     NSString *execPath = [[NSBundle mainBundle] executablePath];
@@ -39,6 +34,10 @@
     
     [task launch];
    
+    
+    TestVC *testvc = [[TestVC alloc] init];
+    [testvc sample];
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -46,7 +45,22 @@
 }
 
 
-- (void)doingSomeOptions
+- (void)doingSomeOptions1
+{
+    
+}
+
+- (void)doingSomeOptions5
+{
+    
+}
+
+
+- (void)doingSomeOptions10
+{
+    
+}
+- (void)doingSomeOptionsfanny
 {
     
 }

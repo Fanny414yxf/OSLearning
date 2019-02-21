@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C25413E321E5DCB70042F979 /* TestFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413E121E5DCB70042F979 /* TestFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C25413EF21E5DF1C0042F979 /* NSDate+Handle.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413E921E5DF1C0042F979 /* NSDate+Handle.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C25413EF21E5DF1C0042F979 /* NSDate+Handle.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413E921E5DF1C0042F979 /* NSDate+Handle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25413F021E5DF1C0042F979 /* NSObject+Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413EA21E5DF1C0042F979 /* NSObject+Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C25413F121E5DF1C0042F979 /* NSString+Handle.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413EB21E5DF1C0042F979 /* NSString+Handle.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C25413F121E5DF1C0042F979 /* NSString+Handle.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413EB21E5DF1C0042F979 /* NSString+Handle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25413F221E5DF1C0042F979 /* NSDate+Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = C25413EC21E5DF1C0042F979 /* NSDate+Handle.m */; };
 		C25413F321E5DF1C0042F979 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = C25413ED21E5DF1C0042F979 /* NSObject+Runtime.m */; };
 		C25413F421E5DF1C0042F979 /* NSString+Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = C25413EE21E5DF1C0042F979 /* NSString+Handle.m */; };
 		C254140121E5DF290042F979 /* UIButton+Code.m in Sources */ = {isa = PBXBuildFile; fileRef = C25413F521E5DF280042F979 /* UIButton+Code.m */; };
-		C254140221E5DF290042F979 /* UILabel+Attributes.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413F621E5DF280042F979 /* UILabel+Attributes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C254140221E5DF290042F979 /* UILabel+Attributes.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413F621E5DF280042F979 /* UILabel+Attributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C254140321E5DF290042F979 /* UIView+FrameGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413F721E5DF280042F979 /* UIView+FrameGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C254140421E5DF290042F979 /* UIView+FrameGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = C25413F821E5DF280042F979 /* UIView+FrameGeometry.m */; };
 		C254140521E5DF290042F979 /* UIAlertController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C25413F921E5DF280042F979 /* UIAlertController+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,9 +117,9 @@
 				C25413E321E5DCB70042F979 /* TestFramework.h in Headers */,
 				C25413F021E5DF1C0042F979 /* NSObject+Runtime.h in Headers */,
 				C254140C21E5DF290042F979 /* UIButton+Code.h in Headers */,
-				C254140221E5DF290042F979 /* UILabel+Attributes.h in Headers */,
 				C254140721E5DF290042F979 /* UINavigationBar+FixSpace.h in Headers */,
 				C254140321E5DF290042F979 /* UIView+FrameGeometry.h in Headers */,
+				C254140221E5DF290042F979 /* UILabel+Attributes.h in Headers */,
 				C254140621E5DF290042F979 /* UIButton+Attributes.h in Headers */,
 				C25413EF21E5DF1C0042F979 /* NSDate+Handle.h in Headers */,
 				C25413F121E5DF1C0042F979 /* NSString+Handle.h in Headers */,
