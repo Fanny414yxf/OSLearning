@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C20479B6224F1D16006ABB48 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		C230416B223B4E1500E5CB59 /* singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		C230416C223B4E8000E5CB59 /* SingletonTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonTest.h; sourceTree = "<group>"; };
 		C230416D223B4E8000E5CB59 /* SingletonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonTest.m; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		C2CB312122367C0F00CAE6B6 = {
 			isa = PBXGroup;
 			children = (
+				C20479B6224F1D16006ABB48 /* info.plist */,
 				C2CB312C22367C0F00CAE6B6 /* FileOptionDome */,
 				C2CB312B22367C0F00CAE6B6 /* Products */,
 			);
@@ -254,6 +256,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -262,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
