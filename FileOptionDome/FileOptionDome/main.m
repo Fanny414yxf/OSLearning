@@ -16,8 +16,8 @@ int main(int argc, const char * argv[]) {
         
         
         Method *method = [[Method alloc] init];
-//        [method beginToChangeFilesHash];
-        [method beginToCopy];
+        [method beginToChangeFilesHash];
+//        [method beginToCopy];
         
     }
     return 0;

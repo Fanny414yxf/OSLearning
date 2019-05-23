@@ -33,7 +33,7 @@
     
     
     _resFilesArr = [NSMutableArray array];
-    NSString *path = @"/Users/cximac/Documents/CX/上传包体/青云传/56-神荒/*/Payload/W6vdShenhuang.app";
+    NSString *path = @"/Users/cximac/Desktop/测试ipa/青云传/不朽逍遥更新包/Payload/buxiuxiaoyaoDajmkz8e.app";
     [self saveToMixResFileArrWithPath:path];
     
     NSFileManager *manage = [NSFileManager defaultManager];
@@ -72,23 +72,24 @@
             NSString * subPath = nil;
             for (NSString * str in dirArray) {
                 subPath  = [fromPath stringByAppendingPathComponent:str];
-//                if ([subPath hasSuffix:@".bundle"]) {
-//                    bundles ++;
-//                    NSLog(@"bundle");
-//                }
+                if ([subPath hasSuffix:@".bundle"]) {
+                    bundles ++;
+                    NSLog(@"bundle");
+                     [_resFilesArr addObject:fromPath];
+                }
                 BOOL issubDir = NO;
                 [fileManger fileExistsAtPath:subPath isDirectory:&issubDir];
                 [self saveToMixResFileArrWithPath:subPath];
             }
         }else{
-            if ([fromPath.pathExtension isEqualToString:@"png"]){
-                NSLog(@"png");
-            }else if ([fromPath.pathExtension isEqualToString:@"bundle"]){
-                
-                NSLog(@"bundle");
-            }else{
-                 [_resFilesArr addObject:fromPath];
-            }
+//            if ([fromPath.pathExtension isEqualToString:@"png"]){
+//                NSLog(@"png");
+//            }else if ([fromPath.pathExtension isEqualToString:@"bundle"]){
+//
+//                NSLog(@"bundle");
+//            }else{
+//                 [_resFilesArr addObject:fromPath];
+//            }
         }
     }
     else{
@@ -235,6 +236,14 @@
         newFilePath = newFilePath.stringByDeletingPathExtension;
     }
 }
+
+
+
+
+
+
+
+
 
 
 @end
